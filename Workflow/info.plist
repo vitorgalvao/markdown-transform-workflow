@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.vitorgalvao.alfred.markdowntransform</string>
+	<key>connections</key>
+	<dict>
+		<key>07362975-9440-4EC8-9FB5-FEC3399F4F0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>26ABF3CB-05C2-473B-9F45-80692E12737E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA17F468-2C2E-4D1C-BA6B-7382C54390C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>29C8EE9F-F0C4-4C5D-A253-A75A220B0A99</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D890BF2F-9E7F-45B8-9335-4317C4A2CBF5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3EDC1F38-1B65-4E42-8181-854D0841D02B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9055930A-E224-4F5A-8DF6-A28E02346C07</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5A616C8D-A6E4-49D0-8E0A-8B0F8CA17112</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>07362975-9440-4EC8-9FB5-FEC3399F4F0E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>79F45392-6A63-457B-BB92-47A1EC02C4E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8D00291C-1755-4FE6-B25A-3CDEDAC457AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7D2CB4ED-0C02-4FB1-BD5C-856BC3ED6CD7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA17F468-2C2E-4D1C-BA6B-7382C54390C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8D00291C-1755-4FE6-B25A-3CDEDAC457AE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9055930A-E224-4F5A-8DF6-A28E02346C07</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>6D025E60-8B2E-4C69-AD8F-C749A35338EF</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7A07BE30-CBD4-4585-A66A-9B14293BBDBE</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A41C31BE-607A-4FE5-8D34-B601B07D9767</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>C078C4DB-988F-4EB4-808B-1162ED5BD582</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9A2DA8F5-ABE8-47ED-85E8-DD75EFD7A249</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8D00291C-1755-4FE6-B25A-3CDEDAC457AE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A41C31BE-607A-4FE5-8D34-B601B07D9767</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A63B2695-A598-499F-AC8D-E040B0F65ACF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>29C8EE9F-F0C4-4C5D-A253-A75A220B0A99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CA17F468-2C2E-4D1C-BA6B-7382C54390C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D890BF2F-9E7F-45B8-9335-4317C4A2CBF5</key>
+		<array/>
+		<key>EEC8812F-CE3E-4CD3-9F4B-57FA84567866</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>07362975-9440-4EC8-9FB5-FEC3399F4F0E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FD9D3F88-71D5-4817-895E-E1D51F887F72</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vítor Galvão</string>
+	<key>description</key>
+	<string>Convert Markdown to BBCode, HTML, and RTF</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Markdown Transform</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>11</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>B</string>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>79F45392-6A63-457B-BB92-47A1EC02C4E4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>save_type</key>
+					<string>utf8-plain-text</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>8D00291C-1755-4FE6-B25A-3CDEDAC457AE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Markdown to BBCode</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>9A2DA8F5-ABE8-47ED-85E8-DD75EFD7A249</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>String.prototype.bbSub = function(htmlTag, bbcodeTag) {
+  return this
+    .replaceAll(`&lt;${htmlTag}&gt;`, `[${bbcodeTag}]`)
+    .replaceAll(`&lt;/${htmlTag}&gt;`, `[/${bbcodeTag}]`)
+}
+
+function run(argv) {
+  return argv[0]
+    .replaceAll("&lt;p&gt;", "").replaceAll("&lt;/p&gt;", "\n")
+    .bbSub("strong", "b")
+    .bbSub("em", "i")
+    .bbSub("strikethrough", "s")
+    .bbSub("underline", "u")
+    .replaceAll(/&lt;a href="(.*?)"&gt;/g, "[url='$1']").replaceAll("&lt;/a&gt;", "[/url]")
+    .replaceAll("&lt;ol&gt;", "[list=1]").replaceAll("&lt;/ol&gt;", "[/list]")
+    .replaceAll(/&lt;img.*?src=['"](.+?)['"].*?&gt;/g, "[img]$1[/img]")
+    .replaceAll(/&lt;\/?figure&gt;/g, "")
+    .replaceAll(/&lt;figcaption&gt;.*&lt;\/figcaption&gt;/g, "")
+    .bbSub("ul", "list")
+    .bbSub("li", "*")
+    .bbSub("blockquote", "quote")
+    .replaceAll(/&lt;pre&gt;&lt;code.*?&gt;/g, "[code]").replaceAll("&lt;/code&gt;&lt;/pre&gt;", "[/code]")
+    .replaceAll("&lt;code&gt;", "[background=#eee][font=courier,monospace]").replaceAll("&lt;/code&gt;", "[/font][/background]")
+    .replaceAll(/&lt;h1.*?&gt;/g, "\n\n[b][size=7]").replaceAll("&lt;/h1&gt;", "[/size][/b]")
+    .replaceAll(/&lt;h2.*?&gt;/g, "\n\n[b][size=6]").replaceAll("&lt;/h2&gt;", "[/size][/b]")
+    .replaceAll(/&lt;h3.*?&gt;/g, "\n\n[b][size=5]").replaceAll("&lt;/h3&gt;", "[/size][/b]")
+    .replaceAll(/&lt;h4.*?&gt;/g, "\n\n[b][size=4]").replaceAll("&lt;/h4&gt;", "[/size][/b]")
+    .bbSub("sup", "sup")
+    .bbSub("sub", "sub")
+    .replaceAll("&lt;hr /&gt;", "[hr]")
+    .replaceAll(/\n*\[list(=1)?\]$/gm, "[list$1]") // Adjustments to list outward spacing in IPBoard
+    .replaceAll(/\[\/list\]\n*/gm, "[/list]")
+    .replaceAll(/^\[quote\]\n*/gm, "[quote]") // Adjustments to qupte spacing in IPBoard
+    .replaceAll(/\n*\[\/quote\]$/gm, "[/quote]")
+    .replaceAll(/^$/gm, "\n") // Bypass empty line collapsing done by IPBoard
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>v</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1048576</integer>
+				<key>overridewithargument</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>D890BF2F-9E7F-45B8-9335-4317C4A2CBF5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ObjC.import('AppKit')
+
+function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function run(argv) {
+  const pboard = $.NSPasteboard.generalPasteboard
+
+  pboard.clearContents
+  pboard.setStringForType(argv[0], `public.${envVar("save_type")}`);
+  pboard.setStringForType(argv[0], 'public.utf8-plain-text');
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>29C8EE9F-F0C4-4C5D-A253-A75A220B0A99</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>const richTextStyle = `
+  &lt;style&gt;
+    body { font-family: sans-serif; font-size: 14; }
+    code { font-family: monospace; background-color: #eee; }
+    p, ul, ol { margin: 0; }
+  &lt;/style&gt;
+`
+
+function run(argv) {
+  const html = `${richTextStyle}${argv[0]}`
+    .replaceAll(/&lt;img.*?&gt;/g, "") // Strip images
+    .replaceAll("&lt;/p&gt;", "&lt;/p&gt;&lt;br&gt;") // Enforce line breaks after paragraphs
+    .replaceAll("&lt;/pre&gt;", "&lt;/pre&gt;&lt;br&gt;") // Enforce line breaks after code blocks
+
+  const task = $.NSTask.alloc.init
+  const stdin = $.NSPipe.pipe
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.fileURLWithPath("/usr/bin/textutil")
+  task.arguments = ["-inputencoding", "utf8", "-convert", "rtf", "-stdin", "-stdout", "-format", "html"]
+  task.standardInput = stdin
+  task.standardOutput = stdout
+  task.launchAndReturnError(false)
+
+  const dataIn = $(html).dataUsingEncoding($.NSUTF8StringEncoding)
+  stdin.fileHandleForWriting.writeDataError(dataIn, false)
+  stdin.fileHandleForWriting.closeAndReturnError(false)
+
+  const dataOut = stdout.fileHandleForReading.readDataToEndOfFileAndReturnError(false)
+  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
+
+  return stringOut
+    .replace(/\\\n\\\n}$/, "}")
+    .split("\n")
+    .toSpliced(3, 2)
+    .join("\n")
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
+# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
+
+multimarkdown &lt; &lt;(printf '\n%s' "${1}")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:save_type}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>utf8-plain-text</string>
+						<key>outputlabel</key>
+						<string>BBCode</string>
+						<key>uid</key>
+						<string>6D025E60-8B2E-4C69-AD8F-C749A35338EF</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:save_type}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>rtf</string>
+						<key>outputlabel</key>
+						<string>RTF</string>
+						<key>uid</key>
+						<string>7A07BE30-CBD4-4585-A66A-9B14293BBDBE</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:save_type}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>html</string>
+						<key>outputlabel</key>
+						<string>HTML</string>
+						<key>uid</key>
+						<string>C078C4DB-988F-4EB4-808B-1162ED5BD582</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string></string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>9055930A-E224-4F5A-8DF6-A28E02346C07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>save_type</key>
+					<string>rtf</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CA17F468-2C2E-4D1C-BA6B-7382C54390C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>A41C31BE-607A-4FE5-8D34-B601B07D9767</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Markdown to RTF</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>7D2CB4ED-0C02-4FB1-BD5C-856BC3ED6CD7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>EEC8812F-CE3E-4CD3-9F4B-57FA84567866</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>save_type</key>
+					<string>html</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>07362975-9440-4EC8-9FB5-FEC3399F4F0E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Markdown to HTML</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>5A616C8D-A6E4-49D0-8E0A-8B0F8CA17112</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Usage
+
+Convert Markdown to BBCode, HTML, or RTF via the [Universal Actions](https://www.alfredapp.com/help/features/universal-actions/). The result is pasted to the frontmost app.
+
+![Universal Actions to convert markdown](images/about/ua.png)
+
+Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for faster triggering.</string>
+	<key>uidata</key>
+	<dict>
+		<key>07362975-9440-4EC8-9FB5-FEC3399F4F0E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>675</real>
+		</dict>
+		<key>26ABF3CB-05C2-473B-9F45-80692E12737E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>Convert Markdown to RTF</string>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>29C8EE9F-F0C4-4C5D-A253-A75A220B0A99</key>
+		<dict>
+			<key>note</key>
+			<string>Save with correct pasteboard types</string>
+			<key>xpos</key>
+			<real>1095</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>3EDC1F38-1B65-4E42-8181-854D0841D02B</key>
+		<dict>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>5A616C8D-A6E4-49D0-8E0A-8B0F8CA17112</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>810</real>
+		</dict>
+		<key>79F45392-6A63-457B-BB92-47A1EC02C4E4</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>10</integer>
+			<key>note</key>
+			<string>Convert Markdown to BBCode</string>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>7D2CB4ED-0C02-4FB1-BD5C-856BC3ED6CD7</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>515</real>
+		</dict>
+		<key>8D00291C-1755-4FE6-B25A-3CDEDAC457AE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>10</integer>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>90</real>
+		</dict>
+		<key>9055930A-E224-4F5A-8DF6-A28E02346C07</key>
+		<dict>
+			<key>xpos</key>
+			<real>610</real>
+			<key>ypos</key>
+			<real>355</real>
+		</dict>
+		<key>9A2DA8F5-ABE8-47ED-85E8-DD75EFD7A249</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>10</integer>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>A41C31BE-607A-4FE5-8D34-B601B07D9767</key>
+		<dict>
+			<key>xpos</key>
+			<real>825</real>
+			<key>ypos</key>
+			<real>485</real>
+		</dict>
+		<key>A63B2695-A598-499F-AC8D-E040B0F65ACF</key>
+		<dict>
+			<key>xpos</key>
+			<real>1000</real>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</key>
+		<dict>
+			<key>xpos</key>
+			<real>785</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>CA17F468-2C2E-4D1C-BA6B-7382C54390C9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>D890BF2F-9E7F-45B8-9335-4317C4A2CBF5</key>
+		<dict>
+			<key>note</key>
+			<string>Fake the key combo to maintain the pasteboard type. E.g.: just pasting the RTF from Alfred would paste as plain text with the RTF syntax showing</string>
+			<key>xpos</key>
+			<real>1285</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>EEC8812F-CE3E-4CD3-9F4B-57FA84567866</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>Convert Markdown to HTML</string>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>645</real>
+		</dict>
+		<key>FD9D3F88-71D5-4817-895E-E1D51F887F72</key>
+		<dict>
+			<key>xpos</key>
+			<real>785</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>version</key>
+	<string>2024.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/vitorgalvao/markdown-transform-workflow/</string>
+</dict>
+</plist>
