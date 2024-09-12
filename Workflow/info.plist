@@ -114,7 +114,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+				<string>DE5B58D3-F477-4733-A5EC-7AB27D44A308</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -216,6 +216,19 @@
 		</array>
 		<key>D890BF2F-9E7F-45B8-9335-4317C4A2CBF5</key>
 		<array/>
+		<key>DE5B58D3-F477-4733-A5EC-7AB27D44A308</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EEC8812F-CE3E-4CD3-9F4B-57FA84567866</key>
 		<array>
 			<dict>
@@ -324,6 +337,29 @@
 			<string>9A2DA8F5-ABE8-47ED-85E8-DD75EFD7A249</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/perl -MHTML::Entities -pe 'decode_entities($_);' &lt;&lt;&lt; "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DE5B58D3-F477-4733-A5EC-7AB27D44A308</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -784,7 +820,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>note</key>
 			<string>Save with correct pasteboard types</string>
 			<key>xpos</key>
-			<real>1095</real>
+			<real>1195</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
@@ -852,21 +888,21 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 		<key>A41C31BE-607A-4FE5-8D34-B601B07D9767</key>
 		<dict>
 			<key>xpos</key>
-			<real>825</real>
+			<real>925</real>
 			<key>ypos</key>
 			<real>485</real>
 		</dict>
 		<key>A63B2695-A598-499F-AC8D-E040B0F65ACF</key>
 		<dict>
 			<key>xpos</key>
-			<real>1000</real>
+			<real>1100</real>
 			<key>ypos</key>
 			<real>380</real>
 		</dict>
 		<key>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>885</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
@@ -884,9 +920,18 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>note</key>
 			<string>Fake the key combo to maintain the pasteboard type. E.g.: just pasting the RTF from Alfred would paste as plain text with the RTF syntax showing</string>
 			<key>xpos</key>
-			<real>1285</real>
+			<real>1385</real>
 			<key>ypos</key>
 			<real>350</real>
+		</dict>
+		<key>DE5B58D3-F477-4733-A5EC-7AB27D44A308</key>
+		<dict>
+			<key>note</key>
+			<string>Decode HTML entities</string>
+			<key>xpos</key>
+			<real>720</real>
+			<key>ypos</key>
+			<real>220</real>
 		</dict>
 		<key>EEC8812F-CE3E-4CD3-9F4B-57FA84567866</key>
 		<dict>
@@ -902,7 +947,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 		<key>FD9D3F88-71D5-4817-895E-E1D51F887F72</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>885</real>
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
