@@ -346,29 +346,6 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/perl -MHTML::Entities -pe 'decode_entities($_);' &lt;&lt;&lt; "${1}"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DE5B58D3-F477-4733-A5EC-7AB27D44A308</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
 				<string>String.prototype.bbSub = function(htmlTag, bbcodeTag) {
   return this
     .replaceAll(`&lt;${htmlTag}&gt;`, `[${bbcodeTag}]`)
@@ -416,6 +393,55 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/perl -MHTML::Entities -pe 'decode_entities($_);' &lt;&lt;&lt; "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DE5B58D3-F477-4733-A5EC-7AB27D44A308</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
+# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
+
+multimarkdown --nosmart &lt; &lt;(printf '\n%s' "${1}")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -534,32 +560,6 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
-# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
-
-multimarkdown &lt; &lt;(printf '\n%s' "${1}")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
