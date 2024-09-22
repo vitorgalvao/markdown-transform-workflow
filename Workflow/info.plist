@@ -422,26 +422,29 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
-# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
-
-multimarkdown --nosmart &lt; &lt;(printf '\n%s' "${1}")</string>
-				<key>scriptargtype</key>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
 				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
 				<string></string>
-				<key>type</key>
-				<integer>11</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -512,6 +515,32 @@ function run(argv) {
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
+# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
+
+multimarkdown --nosmart &lt; &lt;(printf '\n%s' "${1}")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>const richTextStyle = `
   &lt;style&gt;
     body { font-family: sans-serif; font-size: 14; }
@@ -544,10 +573,6 @@ function run(argv) {
   const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
 
   return stringOut
-    .replace(/\\\n\\\n}$/, "}")
-    .split("\n")
-    .toSpliced(3, 2)
-    .join("\n")
 }</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -560,35 +585,6 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<true/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -953,6 +949,8 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
 	<string>2024.2</string>
