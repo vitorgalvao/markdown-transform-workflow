@@ -422,29 +422,54 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
+				<key>concurrently</key>
 				<false/>
-				<key>focusedappvariablename</key>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function run(argv) {
+  const html = `&lt;style&gt;${envVar("rtf_styling")}&lt;/style&gt;${argv[0]}`
+    .replaceAll(/&lt;img.*?&gt;/g, "") // Strip images
+    .replaceAll("&lt;/p&gt;", "&lt;/p&gt;&lt;br&gt;") // Enforce line breaks after paragraphs
+    .replaceAll("&lt;/pre&gt;", "&lt;/pre&gt;&lt;br&gt;") // Enforce line breaks after code blocks
+
+  const task = $.NSTask.alloc.init
+  const stdin = $.NSPipe.pipe
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.fileURLWithPath("/usr/bin/textutil")
+  task.arguments = ["-inputencoding", "utf8", "-convert", "rtf", "-stdin", "-stdout", "-format", "html"]
+  task.standardInput = stdin
+  task.standardOutput = stdout
+  task.launchAndReturnError(false)
+
+  const dataIn = $(html).dataUsingEncoding($.NSUTF8StringEncoding)
+  stdin.fileHandleForWriting.writeDataError(dataIn, false)
+  stdin.fileHandleForWriting.closeAndReturnError(false)
+
+  const dataOut = stdout.fileHandleForReading.readDataToEndOfFileAndReturnError(false)
+  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
+
+  return stringOut
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<true/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
+				<key>type</key>
+				<integer>7</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
+			<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -536,55 +561,29 @@ multimarkdown --nosmart &lt; &lt;(printf '\n%s' "${1}")</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>const richTextStyle = `
-  &lt;style&gt;
-    body { font-family: sans-serif; font-size: 14; }
-    code { font-family: monospace; background-color: #eee; }
-    p, ul, ol { margin: 0; }
-  &lt;/style&gt;
-`
-
-function run(argv) {
-  const html = `${richTextStyle}${argv[0]}`
-    .replaceAll(/&lt;img.*?&gt;/g, "") // Strip images
-    .replaceAll("&lt;/p&gt;", "&lt;/p&gt;&lt;br&gt;") // Enforce line breaks after paragraphs
-    .replaceAll("&lt;/pre&gt;", "&lt;/pre&gt;&lt;br&gt;") // Enforce line breaks after code blocks
-
-  const task = $.NSTask.alloc.init
-  const stdin = $.NSPipe.pipe
-  const stdout = $.NSPipe.pipe
-
-  task.executableURL = $.NSURL.fileURLWithPath("/usr/bin/textutil")
-  task.arguments = ["-inputencoding", "utf8", "-convert", "rtf", "-stdin", "-stdout", "-format", "html"]
-  task.standardInput = stdin
-  task.standardOutput = stdout
-  task.launchAndReturnError(false)
-
-  const dataIn = $(html).dataUsingEncoding($.NSUTF8StringEncoding)
-  stdin.fileHandleForWriting.writeDataError(dataIn, false)
-  stdin.fileHandleForWriting.closeAndReturnError(false)
-
-  const dataOut = stdout.fileHandleForReading.readDataToEndOfFileAndReturnError(false)
-  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
-
-  return stringOut
-}</string>
-				<key>scriptargtype</key>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
 				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
 				<string></string>
-				<key>type</key>
-				<integer>7</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</string>
+			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -949,7 +948,41 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>body {
+  font-family: sans-serif;
+  font-size: 14;
+}
+
+code {
+  font-family: monospace;
+  background-color: #eee;
+}
+
+p, ul, ol {
+  margin: 0;
+}</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+				<key>verticalsize</key>
+				<integer>9</integer>
+			</dict>
+			<key>description</key>
+			<string>CSS to format RTF conversions.</string>
+			<key>label</key>
+			<string>Rich Text Styling</string>
+			<key>type</key>
+			<string>textarea</string>
+			<key>variable</key>
+			<string>rtf_styling</string>
+		</dict>
+	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
