@@ -6,6 +6,19 @@
 	<string>com.vitorgalvao.alfred.markdowntransform</string>
 	<key>connections</key>
 	<dict>
+		<key>0157FD36-90A1-47F6-B5CF-AAAB38902714</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A16F2F0E-AE32-4733-AA19-DD791DF316E1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>07362975-9440-4EC8-9FB5-FEC3399F4F0E</key>
 		<array>
 			<dict>
@@ -162,6 +175,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A16F2F0E-AE32-4733-AA19-DD791DF316E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A41C31BE-607A-4FE5-8D34-B601B07D9767</key>
 		<array>
 			<dict>
@@ -220,7 +246,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+				<string>0157FD36-90A1-47F6-B5CF-AAAB38902714</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -234,19 +260,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>07362975-9440-4EC8-9FB5-FEC3399F4F0E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FD9D3F88-71D5-4817-895E-E1D51F887F72</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A63B2695-A598-499F-AC8D-E040B0F65ACF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -346,41 +359,34 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>String.prototype.bbSub = function(htmlTag, bbcodeTag) {
-  return this
-    .replaceAll(`&lt;${htmlTag}&gt;`, `[${bbcodeTag}]`)
-    .replaceAll(`&lt;/${htmlTag}&gt;`, `[/${bbcodeTag}]`)
-}
-
-function run(argv) {
+				<string>pandoc --from html --to bbcode --wrap preserve &lt;&lt;&lt; "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A16F2F0E-AE32-4733-AA19-DD791DF316E1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function run(argv) {
   return argv[0]
-    .replaceAll("&lt;p&gt;", "").replaceAll("&lt;/p&gt;", "\n")
-    .bbSub("strong", "b")
-    .bbSub("em", "i")
-    .bbSub("strikethrough", "s")
-    .bbSub("underline", "u")
-    .replaceAll(/&lt;a href="(.*?)"&gt;/g, "[url='$1']").replaceAll("&lt;/a&gt;", "[/url]")
-    .replaceAll("&lt;ol&gt;", "[list=1]").replaceAll("&lt;/ol&gt;", "[/list]")
-    .replaceAll(/&lt;img.*?src=['"](.+?)['"].*?&gt;/g, "[img]$1[/img]")
+    .replaceAll("&lt;code&gt;", "[background=#eee][font=courier,monospace]").replaceAll("&lt;/code&gt;", "[/font][/background]")
     .replaceAll(/&lt;\/?figure&gt;/g, "")
     .replaceAll(/&lt;figcaption&gt;.*&lt;\/figcaption&gt;/g, "")
-    .bbSub("ul", "list")
-    .bbSub("li", "*")
-    .bbSub("blockquote", "quote")
-    .replaceAll(/&lt;pre&gt;&lt;code.*?&gt;/g, "[code]").replaceAll("&lt;/code&gt;&lt;/pre&gt;", "[/code]")
-    .replaceAll("&lt;code&gt;", "[background=#eee][font=courier,monospace]").replaceAll("&lt;/code&gt;", "[/font][/background]")
-    .replaceAll(/&lt;h1.*?&gt;/g, "\n\n[b][size=7]").replaceAll("&lt;/h1&gt;", "[/size][/b]")
-    .replaceAll(/&lt;h2.*?&gt;/g, "\n\n[b][size=6]").replaceAll("&lt;/h2&gt;", "[/size][/b]")
-    .replaceAll(/&lt;h3.*?&gt;/g, "\n\n[b][size=5]").replaceAll("&lt;/h3&gt;", "[/size][/b]")
-    .replaceAll(/&lt;h4.*?&gt;/g, "\n\n[b][size=4]").replaceAll("&lt;/h4&gt;", "[/size][/b]")
-    .bbSub("sup", "sup")
-    .bbSub("sub", "sub")
-    .replaceAll("&lt;hr /&gt;", "[hr]")
-    .replaceAll(/\n*\[list(=1)?\]$/gm, "[list$1]") // Adjustments to list outward spacing in IPBoard
-    .replaceAll(/\[\/list\]\n*/gm, "[/list]")
-    .replaceAll(/^\[quote\]\n*/gm, "[quote]") // Adjustments to qupte spacing in IPBoard
-    .replaceAll(/\n*\[\/quote\]$/gm, "[/quote]")
-    .replaceAll(/^$/gm, "\n") // Bypass empty line collapsing done by IPBoard
 }</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -392,7 +398,7 @@ function run(argv) {
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FD9D3F88-71D5-4817-895E-E1D51F887F72</string>
+			<string>0157FD36-90A1-47F6-B5CF-AAAB38902714</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -416,6 +422,58 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>DE5B58D3-F477-4733-A5EC-7AB27D44A308</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>pandoc --from markdown --to html --wrap preserve &lt;&lt;&lt; "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<true/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -529,61 +587,6 @@ function run(argv) {
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>29C8EE9F-F0C4-4C5D-A253-A75A220B0A99</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># An empty line is added to the beginning of STDIN so text starting with a word and a colon won't be interpreted as metadata
-# https://web.archive.org/web/20240524150444/https://fletcher.github.io/MultiMarkdown-6/MMD_Users_Guide.html#metadata 
-
-multimarkdown --nosmart &lt; &lt;(printf '\n%s' "${1}")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3EDC1F38-1B65-4E42-8181-854D0841D02B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<true/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>26ABF3CB-05C2-473B-9F45-80692E12737E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -790,6 +793,13 @@ Convert Markdown to BBCode, HTML, or RTF via the [Universal Actions](https://www
 Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for faster triggering.</string>
 	<key>uidata</key>
 	<dict>
+		<key>0157FD36-90A1-47F6-B5CF-AAAB38902714</key>
+		<dict>
+			<key>xpos</key>
+			<real>860</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
 		<key>07362975-9440-4EC8-9FB5-FEC3399F4F0E</key>
 		<dict>
 			<key>colorindex</key>
@@ -815,7 +825,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>note</key>
 			<string>Save with correct pasteboard types</string>
 			<key>xpos</key>
-			<real>1195</real>
+			<real>1300</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
@@ -867,7 +877,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 		<key>9055930A-E224-4F5A-8DF6-A28E02346C07</key>
 		<dict>
 			<key>xpos</key>
-			<real>610</real>
+			<real>595</real>
 			<key>ypos</key>
 			<real>355</real>
 		</dict>
@@ -880,24 +890,31 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
+		<key>A16F2F0E-AE32-4733-AA19-DD791DF316E1</key>
+		<dict>
+			<key>xpos</key>
+			<real>1015</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
 		<key>A41C31BE-607A-4FE5-8D34-B601B07D9767</key>
 		<dict>
 			<key>xpos</key>
-			<real>925</real>
+			<real>900</real>
 			<key>ypos</key>
 			<real>485</real>
 		</dict>
 		<key>A63B2695-A598-499F-AC8D-E040B0F65ACF</key>
 		<dict>
 			<key>xpos</key>
-			<real>1100</real>
+			<real>1205</real>
 			<key>ypos</key>
 			<real>380</real>
 		</dict>
 		<key>B7F1D262-8D7B-40FE-AFA0-9EB544CDF70B</key>
 		<dict>
 			<key>xpos</key>
-			<real>885</real>
+			<real>860</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
@@ -915,7 +932,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>note</key>
 			<string>Fake the key combo to maintain the pasteboard type. E.g.: just pasting the RTF from Alfred would paste as plain text with the RTF syntax showing</string>
 			<key>xpos</key>
-			<real>1385</real>
+			<real>1490</real>
 			<key>ypos</key>
 			<real>350</real>
 		</dict>
@@ -924,7 +941,7 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<key>note</key>
 			<string>Decode HTML entities</string>
 			<key>xpos</key>
-			<real>720</real>
+			<real>705</real>
 			<key>ypos</key>
 			<real>220</real>
 		</dict>
@@ -938,13 +955,6 @@ Configure the [Hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey
 			<real>80</real>
 			<key>ypos</key>
 			<real>645</real>
-		</dict>
-		<key>FD9D3F88-71D5-4817-895E-E1D51F887F72</key>
-		<dict>
-			<key>xpos</key>
-			<real>885</real>
-			<key>ypos</key>
-			<real>220</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
